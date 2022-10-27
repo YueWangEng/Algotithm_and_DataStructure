@@ -1,3 +1,3 @@
 ﻿# Algotithm_and_DataStructure
 
-##Key points and corresponding practices
+## Key points and corresponding practices
