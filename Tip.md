@@ -1,33 +1,39 @@
 # Tips for coding
 
-###创建列表
+### 创建列表. 
+```
 list = [i for i in range(10)]
 list = [0 for _ in range(10)]
 list1 = [0]*10
+```
 
-###不反复调用的简单函数，尽量使用匿名函数lambda
-# x = lambda args: expression
+### 不反复调用的简单函数，尽量使用匿名函数lambda. 
+```
+x = lambda args: expression
+```
 
-###灵活使用while...else和for...else，没有中断语句，例如break,return,则执行else后面的语句
+### 灵活使用`while...else`和`for...else`，没有中断语句，例如break,return,则执行else后面的语句
 
-###常用的辅助函数，zip(), map(), sort()
+### 常用的辅助函数. 
+zip(), map(), sort()
 
-###类型转化函数，用于转化序列为相应的类型，list(), dict(), set()，其中set()可用于去重。
+### 类型转化函数，用于转化序列为相应的类型，list(), dict(), set()，其中set()可用于去重。
 
-###divmod(x,y)函数，可以同时返回整数商和余数
+### divmod(x,y)函数，可以同时返回整数商和余数
 
-###set的效率更高，速度快. 例如，查找效率：set>dict>list,时间复杂度set为o(log(n))，list为o(n).
+### set的效率更高，速度快. 例如，查找效率：set>dict>list,时间复杂度set为o(log(n))，list为o(n).
 
-###字典三序列：dic.keys(), dic.values(), dic.items().
+### 字典三序列：dic.keys(), dic.values(), dic.items().
 
-###排序函数：sort()（仅针对list）, sorted(), max(), min(), 要会用key参数解决问题。
+### 排序函数：sort()（仅针对list）, sorted(), max(), min(), 要会用key参数解决问题。
 
-###递归函数。由于要递归题目提供的实例构造方法，需使用self.方法(参数)形式。递归函数：1）需要终止条件；2）只关注本层任务；3）返回结果只需关注最终结果。
+### 递归函数。由于要递归题目提供的实例构造方法，需使用self.方法(参数)形式。递归函数：1）需要终止条件；2）只关注本层任务；3）返回结果只需关注最终结果。
 
-###“列表 += 元组”，是可行的。
+### “列表 += 元组”，是可行的。
+```
 l = [1,2,3,4,5]
 t= (6,7,8,9,10)
 l += t
 print(l)
-
-###逆向提取序列中的元素，可以使用-1参数，例如对于列表l中，l[5:1:-1]是对于位置5到位置2的元素逆序，也可用遍历for i in range(5,1,-1)实现。
+```
+### 逆向提取序列中的元素，可以使用-1参数，例如对于列表l中，l[5:1:-1]是对于位置5到位置2的元素逆序，也可用遍历for i in range(5,1,-1)实现。
