@@ -22,7 +22,8 @@ x = lambda args: expression
 
 ### 6) divmod(x,y)函数，可以同时返回整数商和余数
 
-### 7) set的效率更高，速度快. 例如，查找效率：set>dict>list,时间复杂度set为o(log(n))，list为o(n).
+### 7) set的效率更高，速度快. 
+例如，查找效率：set>dict>list,时间复杂度set为o(log(n))，list为o(n).
 
 ### 8) 字典三序列  
 `dic.keys()`, `dic.values()`, `dic.items()`
