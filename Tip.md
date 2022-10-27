@@ -48,4 +48,6 @@ print(l)
 也可用遍历`for i in range(5,1,-1)`实现。
 
 ### 13）处理字符串，特别是长句，常用函数
-`join()`, 'filter()`, 'replace()
+`join()`
+`filter()`
+`replace()`
