@@ -15,7 +15,7 @@ x = lambda args: expression
 ### 3) 灵活使用`while...else`和`for...else`，没有中断语句，例如break,return,则执行else后面的语句
 
 ### 4) 常用的辅助函数. 
-zip(), map(), sort()
+`zip()`, `map()`, `sort()`
 
 ### 5) 类型转化函数，用于转化序列为相应的类型，list(), dict(), set()，其中set()可用于去重。
 
