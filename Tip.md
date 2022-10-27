@@ -13,7 +13,8 @@ x = lambda args: expression
 ```
 
 ### 3) 迭代指令  
-灵活使用`while...else`和`for...else`，没有中断语句，例如break,return,则执行else后面的语句
+灵活使用`while...else`和`for...else`，没有中断语句。
+例如break,return,则执行else后面的语句
 
 ### 4) 常用的辅助函数  
 `zip()`, `map()`, `sort()`
@@ -26,12 +27,13 @@ x = lambda args: expression
 例如，查找效率：set>dict>list,时间复杂度set为o(log(n))，list为o(n).
 
 ### 8) 字典三序列  
-`dic.keys()`, `dic.values()`, `dic.items()`
+`dic.keys()`, `dic.values()`, `dic.items()`，返回值均为序列，需要列表形式，则用`list()`转换
 
-### 9) 排序函数：sort()（仅针对list）, sorted(), max(), min(), 要会用key参数解决问题。
+### 9) 排序函数
+`sort()`（仅针对list）, `sorted()`, `max()`, `min()`, 要会用key参数解决问题。
 
 ### 10) 递归函数  
-由于要递归题目提供的实例构造方法，需使用·self.方法(参数)·形式。  
+由于要递归题目提供的实例构造方法，需使用`self.方法(参数)`形式。  
 递归函数：1）需要终止条件；2）只关注本层任务；3）返回结果只需关注最终结果。
 
 ### 11) “列表 += 元组”，是可行的。
@@ -42,4 +44,5 @@ l += t
 print(l)
 ```
 ### 12) 逆向提取序列中的元素，可以使用-1参数，  
-例如对于列表l中，l[5:1:-1]是对于位置5到位置2的元素逆序，也可用遍历for i in range(5,1,-1)实现。
+例如对于列表l中，`l[5:1:-1]`是对于位置5到位置2的元素逆序,
+也可用遍历`for i in range(5,1,-1)`实现。
