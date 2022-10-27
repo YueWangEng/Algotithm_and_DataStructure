@@ -25,7 +25,9 @@ zip(), map(), sort()
 
 ### 8) 字典三序列
 `dic.keys()` 
+
  `dic.values()`
+ 
  `dic.items()`
 
 ### 9) 排序函数：sort()（仅针对list）, sorted(), max(), min(), 要会用key参数解决问题。
