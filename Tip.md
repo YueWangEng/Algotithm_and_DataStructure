@@ -23,7 +23,8 @@ x = lambda args: expression
 
 ### 7) set的效率更高，速度快. 例如，查找效率：set>dict>list,时间复杂度set为o(log(n))，list为o(n).
 
-### 8) 字典三序列  `dic.keys()`, `dic.values()`, `dic.items()`
+### 8) 字典三序列  
+`dic.keys()`, `dic.values()`, `dic.items()`
 
 ### 9) 排序函数：sort()（仅针对list）, sorted(), max(), min(), 要会用key参数解决问题。
 
