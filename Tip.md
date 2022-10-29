@@ -26,7 +26,7 @@ x = lambda args: expression
 `zip()`, `map()`, `sort()`
 
 ### 5) 类型转化函数  
-用于转化序列为相应的类型，list(), dict(), set()，其中set()可用于去重。  
+用于转化序列为相应的类型，`list()`, `dict()`, `set()`，其中`set()`可用于去重。  
 
 ### 6) divmod(x,y)函数，可以同时返回整数商和余数
   
