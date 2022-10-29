@@ -11,10 +11,15 @@ class Queue:
             self.queue[self.rear] = v
         else:
             raise IndexError('The queue is filled')
+    '''
+    此处设计的queue,front所指位置总是为零（空位），front的下一个位置才是queue的起始位置。
+    这样设计易于判断queue是否已满，否则，空与满的条件都将为rear == front。
+    这里区分python自带模块，deque，该模块不包含空位。
+    '''
 
     def pop(self):
         if not self.is_empty():
-            self.front = (self.front + 1) % self.length    #此处设计的queue,front所指位置总是为零，front的下一个位置才是queue的起始位置。这样设计易于判断queue是否已满。
+            self.front = (self.front + 1) % self.length
             return self.queue[self.front]
         else:
             raise IndexError('The queue is empty')
