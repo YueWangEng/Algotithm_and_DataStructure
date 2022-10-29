@@ -57,3 +57,10 @@ print(l)
 `join()`
 `filter()`
 `replace()`
+`rstrip(arg)`
+`split(arg)`
+
+### 14) input函数  
+输入字符串: `inp = input('please input a string: ')`  
+输入数字: `inp = int(input('please input a number: '))`  
+输入列表: `inp = list(map(int,input().rstrip().split()))`  
