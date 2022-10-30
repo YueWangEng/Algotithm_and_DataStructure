@@ -65,3 +65,6 @@ print(l)
 输入字符串: `inp = input('please input a string: ')`  
 输入数字: `inp = int(input('please input a number: '))`  
 输入列表: `inp = list(map(int,input().rstrip().split()))`  
+
+### 15) 链表问题
+常用方法：1）递归；2）设置虚拟头节点；3）快慢指针；4）测试函数（链表和列表之间互相转换）。
