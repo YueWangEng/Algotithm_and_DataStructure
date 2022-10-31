@@ -86,3 +86,18 @@ data = [7, 8]
 print(add(*data))
 ```
 字典前面加两个星号，是将字典解开成为独立的元素作为形参。
+
+### 17）随机变量
+采用random模块可生成各种形式的随机变量。例如：
+
+在一定范围内生成随机整数：   
+```
+import random
+hh=random.randint(100,150)
+print(hh)
+```
+在一定范围内生成一定长度的随机整数列表：  
+```
+ll = random.choices([i for i in range(100)],k=3)
+print(ll)
+```
