@@ -67,7 +67,8 @@ print(l)
 `filter()`
 `replace()`
 `rstrip(arg)`
-`split(arg)`
+`split(arg)`  
+其他更复杂的处理，可以选用正则表达式模块。
 
 ### 14) input函数  
 输入字符串: `inp = input('please input a string: ')`  
