@@ -63,11 +63,12 @@ print(l)
 也可用遍历`for i in range(5,1,-1)`实现。
 
 ### 13）处理字符串，特别是长句，常用函数
-`join()`
-`filter()`
-`replace()`
-`rstrip(arg)`
+`join()`  
+`filter()`  
+`replace()`  
+`rstrip(arg)`  
 `split(arg)`  
+
 其他更复杂的处理，可以选用正则表达式模块。
 
 ### 14) input函数  
