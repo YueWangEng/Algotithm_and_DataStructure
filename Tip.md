@@ -38,9 +38,9 @@ u = zip(*xyz)
 
 ### 6 数字处理
 1) `divmod(x,y)` 函数，可以同时返回整数商和余数
-2) 按位提取各位数字: 
-  (1) 先转化为string，string为序列，可按位读取，`list_n = [int(i) for i in str(n)]`。
-  (2) 采用商余函数
+2) 按位提取各位数字:  
+  (1) 先转化为string，string为序列，可按位读取，`list_n = [int(i) for i in str(n)]`。  
+  (2) 采用商余函数。  
   ```
   list = []
   while n > 0:
