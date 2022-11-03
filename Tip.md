@@ -1,6 +1,6 @@
 # Tips for coding
 
-### 1) 创建列表  
+### 1 创建列表  
 ```
 list = [i for i in range(10)]
 list = [0 for _ in range(10)]
@@ -12,8 +12,8 @@ list1 = [i+2 for i in list]
 list1 = [str(i) for i in list]
 list1 = [str(i) for i in range(10)]
 ```
-
-### 2) 不反复调用的简单函数，尽量使用匿名函数lambda  
+### 2
+### 2 不反复调用的简单函数，尽量使用匿名函数lambda  
 ```
 x = lambda args: expression
 ```
