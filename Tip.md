@@ -12,17 +12,17 @@ list1 = [i+2 for i in list]
 list1 = [str(i) for i in list]
 list1 = [str(i) for i in range(10)]
 ```
-### 2
+
 ### 2 不反复调用的简单函数，尽量使用匿名函数lambda  
 ```
 x = lambda args: expression
 ```
 
-### 3) 迭代指令  
+### 3 迭代指令  
 灵活使用`while...else`和`for...else`，没有中断语句。
 例如break,return,则执行else后面的语句
 
-### 4) 常用的辅助函数  
+### 4 常用的辅助函数  
 `zip()`, `map()`, `sort()`  
 其中，`zip()`用于一一对照。例如：  
 ```
@@ -33,11 +33,21 @@ xyz = zip(x, y, z)
 u = zip(*xyz)
 ```
 
-### 5) 类型转化函数  
+### 5 类型转化函数  
 用于转化序列为相应的类型，`list()`, `dict()`, `set()`，其中`set()`可用于去重。  
 
-### 6) divmod(x,y)函数，可以同时返回整数商和余数
-  
+### 6 数字处理
+1) `divmod(x,y)` 函数，可以同时返回整数商和余数
+2) 按位提取各位数字: 
+  (1) 先转化为string，string为序列，可按位读取，`list_n = [int(i) for i in str(n)]`。
+  (2) 采用商余函数
+  ```
+  list = []
+  while n > 0:
+    n, y = divmod(n, 10)
+    list.append(y)
+    ```
+
 ### 7) set的效率更高，速度快. 
 例如，查找效率：set>dict>list,时间复杂度set为o(log(n))，list为o(n).
 
