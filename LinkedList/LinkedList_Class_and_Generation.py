@@ -54,7 +54,7 @@ def tail_list_to_linkedlist(ll):
 def linkedlist_to_list(head1):
     ll = []
     while head1:
-        ll.append(head1.item)
+        ll.append(head1.item)   #得到的list与linked list顺序相同
         head1 = head1.next
     return ll
 
@@ -63,5 +63,5 @@ list1 = [1, 2, 3]
 head = head_opt_list_to_linkedlist(list1)
 print(head.next.next.item)
 
-# ll = linkedlist_to_list(head)
-# print(ll)
+ll = linkedlist_to_list(head)
+print(ll)
