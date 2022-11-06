@@ -19,10 +19,13 @@ def head_list_to_linkedlist(ll):
 
 '''
 这里不可使用以下部分来创建，由于没有保存到node,下面两行中的ListNode(val)相当于分别创建了两个毫无关联的新节点。
-ListNode(val).next = head1
-head1.next = ListNode(val)
+ListNode(val).next = head1  #生成了节点ListNode(val)
+head1.next = ListNode(val)  #生成了另一个节点ListNode(val)，与前一个语句生
 '''
 
+
+# 头节点法补充（简化版）
+#对List Node的类定义进行修改
 
 # 尾节点法
 def tail_list_to_linkedlist(ll):
