@@ -20,12 +20,24 @@ def head_list_to_linkedlist(ll):
 '''
 这里不可使用以下部分来创建，由于没有保存到node,下面两行中的ListNode(val)相当于分别创建了两个毫无关联的新节点。
 ListNode(val).next = head1  #生成了节点ListNode(val)
-head1.next = ListNode(val)  #生成了另一个节点ListNode(val)，与前一个语句生
+head1.next = ListNode(val)  #生成了另一个节点ListNode(val)，与前一个语句生成的ListNode(val)并无关系
 '''
 
 
 # 头节点法补充（简化版）
-#对List Node的类定义进行修改
+# 对List Node的类定义进行修改
+class ListNode:
+    def __init__(self, item1, next1=None):
+        self.item = item1
+        self.next = next1
+
+
+def head_opt_list_to_linkedlist(ll):
+    head1 = None
+    for val in ll:
+        head1 = ListNode(val, head1)
+    return head1
+
 
 # 尾节点法
 def tail_list_to_linkedlist(ll):
@@ -48,8 +60,8 @@ def linkedlist_to_list(head1):
 
 
 list1 = [1, 2, 3]
-head = head_list_to_linkedlist(list1)
-print(head.item)
+head = head_opt_list_to_linkedlist(list1)
+print(head.next.next.item)
 
-ll = linkedlist_to_list(head)
-print(ll)
+# ll = linkedlist_to_list(head)
+# print(ll)
