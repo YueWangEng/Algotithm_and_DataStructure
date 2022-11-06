@@ -34,7 +34,7 @@ class ListNode:
 
 def head_opt_list_to_linkedlist(ll):
     head1 = None
-    for val in ll:
+    for val in reversed(ll):
         head1 = ListNode(val, head1)
     return head1
 
@@ -60,7 +60,7 @@ def linkedlist_to_list(head1):
 
 
 list1 = [1, 2, 3]
-head = head_opt_list_to_linkedlist(list1)
+head = head_list_to_linkedlist(list1)
 print(head.next.next.item)
 
 ll = linkedlist_to_list(head)
