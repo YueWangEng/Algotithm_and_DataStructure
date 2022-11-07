@@ -19,4 +19,4 @@
 5) k8s
 6) jekkins
 7) 正则表达式
-8）git
+8) git
