@@ -50,17 +50,27 @@ def tail_list_to_linkedlist(ll):
     return head1
 
 
+# 尾节点法简化版
+def tail_opt_list_to_linkedlist(ll):
+    head1 = ListNode(ll[0])
+    tail1 = head1
+    for val in ll[1:]:
+        tail1.next = ListNode(val)  #区分与头节点法简化的区别，这里可以直接使用，新建的节点ListNode(val)即赋值给tail.next
+        tail1 = tail1.next
+    return head1
+
+
 # 由链表生成列表(LinkedList >> list)
 def linkedlist_to_list(head1):
     ll = []
     while head1:
-        ll.append(head1.item)   #得到的list与linked list顺序相同
+        ll.append(head1.item)  # 得到的list与linked list顺序相同
         head1 = head1.next
     return ll
 
 
 list1 = [1, 2, 3]
-head = head_list_to_linkedlist(list1)
+head = tail_opt_list_to_linkedlist(list1)
 print(head.next.next.item)
 
 ll = linkedlist_to_list(head)
