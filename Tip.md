@@ -22,7 +22,8 @@ x = lambda args: expression
 灵活使用`while...else`和`for...else`，没有中断语句，例如break,return,则执行else后面的语句
 
 ### 4 常用的辅助函数  
-`zip()`, `map()`, `sort()`  
+`zip()` `map()`，这两个函数返回值均为迭代器。需要列表形式，则用`list()`转换。
+
 其中，`zip()`用于一一对照。例如：  
 ```
 x = [1, 2, 3]
@@ -47,10 +48,10 @@ u = zip(*xyz)
   ```
 
 ### 7) set的效率更高，速度快. 
-例如，查找效率：set>dict>list,时间复杂度set为o(log(n))，list为o(n).
+例如，查找效率：set > dict > list,时间复杂度set为o(log(n))，list为o(n).
 
 ### 8) 字典三序列  
-`dic.keys()`, `dic.values()`, `dic.items()`，返回值均为序列，需要列表形式，则用`list()`转换
+`dic.keys()`, `dic.values()`, `dic.items()`，返回值均为迭代器。需要列表形式，则用`list()`转换。
 
 ### 9) 排序函数
 `sort()`（仅针对list）, `sorted()`, `max()`, `min()`, 要会用key参数解决问题。
@@ -81,8 +82,7 @@ print(l)
 `replace()`  
 `rstrip(arg)`  
 `split(arg)`  
-
-其他更复杂的处理，可以选用正则表达式模块。
+`正则表达式`
 
 ### 14) input函数  
 输入字符串: `inp = input('please input a string: ')`  
