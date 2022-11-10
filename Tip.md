@@ -116,3 +116,13 @@ print(hh)
 ll = random.choices([i for i in range(100)],k=3)
 print(ll)
 ```
+
+### 18) 正则表达式之提取字符串（括号，任意两个指定字符之间等等），例如提取(}之间的字符串，返回满足条件的字符串的列表。
+
+```
+import re
+p1 = re.compile(r'[(](.*?)[}]', re.S)
+ll = re.findall(p1, str)
+print (ll)
+```
+
