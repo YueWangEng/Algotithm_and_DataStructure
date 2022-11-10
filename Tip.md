@@ -121,6 +121,7 @@ print(ll)
 例如提取(}之间的字符串，返回满足条件的字符串的列表。
 ```python3
 import re
+str = '1n3(dfngj}redfk'
 p1 = re.compile(r'[(](.*?)[}]', re.S)
 ll = re.findall(p1, str)
 print (ll)
