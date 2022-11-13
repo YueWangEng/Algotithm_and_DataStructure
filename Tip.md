@@ -54,8 +54,11 @@ u = zip(*xyz)
 `dic.keys()`, `dic.values()`, `dic.items()`，返回值均为迭代器。需要列表形式，则用`list()`转换。
 
 ### 9) 排序函数，要会用key参数解决问题。
-`sort()`（仅针对list），对现有list直接排序，`list.sort()`。没有返回值。  
-`sorted()`, 系统函数，可用于所有可迭代对象，包括字符串。返回值为一个新的list。  
+`sort()`（仅针对list），对现有list直接排序，`list.sort(key, reverse)`。没有返回值。  
+
+`sorted()`, 系统函数，可用于所有可迭代对象，包括字符串, sorted(iterable, key, reverse)。返回值为一个新的list。  
+  key function作为定制排序规则，reverse默认为False，即升序。  
+ 
 `max()`, `min()`，系统函数，可用于所有可迭代对象，包括字符串。返回值为最值。  
 
 ### 10) 递归函数  
@@ -129,3 +132,8 @@ ll = re.findall(p1, str)
 print (ll)
 ```
 ### 19) 函数的定义必须在函数的调用之前。但函数A内部调用另一个函数B，则函数B的定义可以在函数A之后。
+
+### 20) 字符串的大小比较。
+在python中，默认是按照ascii的大小比较的；  
+字符串按位比较，两个字符串第一位字符的ascii码谁大，字符串就大，不再比较后面的；第一个字符相同就比第二个字符串，以此类推。
+例如：`'f' > 'abc'`. 
