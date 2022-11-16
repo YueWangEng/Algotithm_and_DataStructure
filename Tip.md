@@ -64,8 +64,20 @@ u = zip(*xyz)
 
 *重点：* key function作为定制排序规则，reverse默认为False，即升序。  
 1) key可为现有函数或者匿名函数，例如 `key=str.lower()` 用于字符串在小写情况下的排序，`key=lambda x:x[i]` 用于由list组成的序列，按第二项进行排序。  
-2) key在负载情况下（例如先按第一项排序，相等的情况下按照第二项排序），可以自定义函数cmp。这时候需要用到 `functools` 中的 `cmp_to_key`。
+2) key在复杂情况下（例如先按第一项排序，相等的情况下按照第二项排序，或者要比较的项不在序列中，而在另一个相关序列中），可以自定义函数cmp。这时候需要用到 `functools` 中的 `cmp_to_key`。例如以下，要按照字典中对应值的大小，对字典键组成的list排序。
+```python
+from functools import cmp_to_key
 
+dica = {'a':5, 'b':6, 'c':2, 'd':1,'e':3,'f':9}
+lista_key = list(dica.keys())
+def cmp(x, y):
+    if dica[x] > dica [y]:
+        return 1
+    else:
+        return -1
+ll = sorted(lista_key, key= cmp_to_key(cmp))
+print(ll)
+```
 ### 10) 递归函数  
 由于要递归题目提供的实例构造方法，需使用`self.方法(参数)`形式。  
 递归函数：1）需要终止条件；2）只关注本层任务；3）返回结果只需关注最终结果。
