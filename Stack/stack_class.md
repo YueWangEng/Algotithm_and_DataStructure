@@ -1,3 +1,7 @@
+### 创建一个stack类
+在实际应用中，除非特殊要求，一般不需要创建该类，只需使用该解题思想即可。
+
+```python
 class Stack:
   def __init__(self) -> None:
     self.stack = []
@@ -16,3 +20,4 @@ class Stack:
 
   def __str__(self) -> str:
         return self.stack
+```
