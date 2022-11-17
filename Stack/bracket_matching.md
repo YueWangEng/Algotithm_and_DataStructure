@@ -1,6 +1,11 @@
+### LeetCode 20
 
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+An input string is valid if:
 
-
+1) Open brackets must be closed by the same type of brackets.
+2) Open brackets must be closed in the correct order.
+3) Every close bracket has a corresponding open bracket of the same type.
 
 
 1) Build stack
@@ -26,7 +31,7 @@ class Stack:
         return self.stack
 ```
 
-2) Solution part  
+2) Solution part (*该解法可适用于包含任意字符的字符串*）  
 
 ```Python
 #This question doesn't need create stack class,instead, just using the idea of stack is okay.
