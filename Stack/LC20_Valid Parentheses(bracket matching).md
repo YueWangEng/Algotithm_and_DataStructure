@@ -60,3 +60,23 @@ if __name__== '__main__':
       else:
             print('wrong')
 ```
+
+3) Improved solution
+
+```python
+def isValid(self, s: str) -> bool:
+    match = {'(':')', '[':']','{':'}'}
+    stack = []
+    for val in s:
+        if val in match:
+            stack.append(val)
+        elif len(stack) != 0 and val == match[stack[-1]]:
+            stack.pop()
+        else:
+            return False
+
+    if len(stack) == 0:
+        return True
+    else:
+        return False
+```
