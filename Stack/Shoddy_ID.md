@@ -31,12 +31,12 @@ theID = None
 count = 0
 for val in ll:
     if count == 0:
-        theID = val
+        theID = val #空了就赋值
         count += 1
     else:
         if val != theID:
-            count -= 1
+            count -= 1  #非空的情况下，遇到不同值，原有count数减1，相当于相消。
         else:
-            count += 1
+            count += 1  #遇到相同值，则递增。
 print (theID)
 ```
