@@ -1,3 +1,11 @@
+
+
+
+
+
+1) Build stack
+
+```python
 class Stack:
   def __init__(self) -> None:
     self.stack = []
@@ -16,9 +24,12 @@ class Stack:
 
   def __str__(self) -> str:
         return self.stack
+```
 
+2) Solution part
 #This question doesn't need create stack class,instead, just using the idea of stack is okay.
 
+```Python
 s = '[lsdkkf]{>[(afi)]}'
 s1 = ''.join([i for i in s if i in '{}[]()'])
 
@@ -44,3 +55,4 @@ if __name__== '__main__':
             print ('correct')
       else:
             print('wrong')
+```
