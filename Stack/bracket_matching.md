@@ -27,9 +27,10 @@ class Stack:
 ```
 
 2) Solution part  
-#This question doesn't need create stack class,instead, just using the idea of stack is okay.
 
 ```Python
+#This question doesn't need create stack class,instead, just using the idea of stack is okay.
+
 s = '[lsdkkf]{>[(afi)]}'
 s1 = ''.join([i for i in s if i in '{}[]()'])
 
