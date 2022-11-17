@@ -35,7 +35,7 @@ class Stack:
 #This question doesn't need create stack class, instead, just using the idea of stack is okay.**
 
 s = '[lsdkkf]{>[(afi)]}'
-s1 = ''.join([i for i in s if i in '{}[]()'])
+s1 = ''.join([i for i in s if i in '{}[]()']) #delete the invalid chars
 
 print(s1)
 
