@@ -26,7 +26,7 @@ class Stack:
         return self.stack
 ```
 
-2) Solution part
+2) Solution part  
 #This question doesn't need create stack class,instead, just using the idea of stack is okay.
 
 ```Python
