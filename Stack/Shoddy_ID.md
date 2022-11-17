@@ -1,7 +1,7 @@
 ### Problem Description: Searching Shoddy ID
 There is a sequence of IDs，in which the repetive rated of one shoddy ID is higher the 50%. Please find the shoddy ID.
 
-**Mehtod 1: **
+**Mehtod 1:**
 
 As the rate of shoddy ID is highter than 50%. Add the element to the stack if the values are same, and delete the element from the stack if the value are different.
 
