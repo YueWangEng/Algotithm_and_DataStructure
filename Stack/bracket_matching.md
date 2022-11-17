@@ -31,10 +31,10 @@ class Stack:
         return self.stack
 ```
 
-2) Solution part (*该解法可适用于包含任意字符的字符串*）  
+2) Solution part (**该解法可适用于包含任意字符的字符串**）  
 
 ```Python
-#This question doesn't need create stack class,instead, just using the idea of stack is okay.
+#**This question doesn't need create stack class,instead, just using the idea of stack is okay.**
 
 s = '[lsdkkf]{>[(afi)]}'
 s1 = ''.join([i for i in s if i in '{}[]()'])
