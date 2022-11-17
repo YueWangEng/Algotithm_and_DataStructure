@@ -22,7 +22,7 @@ print (stack)
 
 **Improved Method**
 
-Usinf stack will improve the space complexity. The is no need to use the stack, instead, using two variables, one is for the value (the stack top value in the method 1) and the other is for the account.
+Using stack will improve the space complexity. The is no need to use the stack, instead, using two variables, one is for the value (the stack top value in the method 1) and the other is for the account.
 
 ```python
 ll = [1,2,3,4,5,1,6,1,2,1,3,1,2,3,2,1,1,1,1,1,5,1,1,5,1,5,1,6,17,1,8,1,1,1,1,1,1,1,9]
