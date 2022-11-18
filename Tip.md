@@ -170,12 +170,14 @@ print (ll)
   `list.pop([index=-1])`，默认值为-1，列表最后一个元素。  
   `dict.pop(key[,default])`,必须要给出要删除的key，返回值为键对应的值。  
   `set.pop()`,随机删除集合的一个元素。  
-2) `序列.remove(obj)'。删除指定元素，obj必须给出，无默认值。序列发生变化，无返回值。
-  `list.remove(obj)`, 删除元素obj,有重复值时，只删除第一个匹配项。
-  `set.remove(obj)`,删除元素obj.
-  dict不能使用`remove()`方法。
+  
+2) `序列.remove(obj)'。删除指定元素，obj必须给出，无默认值。序列发生变化，无返回值。  
+  `list.remove(obj)`, 删除元素obj,有重复值时，只删除第一个匹配项。  
+  `set.remove(obj)`,删除元素obj。  
+  dict不能使用`remove()`方法。  
+  
 3) `del 序列`，系统函数。
-  `del list[index]`, 删除指定元素；`del list`,删除整个list.
-  `del dict[key]`,删除指定的键和对应的值；`del dict`，删除整个dict。
-  `del set`,删除整个集合。无法删除单个元素。
+  `del list[index]`, 删除指定元素；`del list`,删除整个list。  
+  `del dict[key]`,删除指定的键和对应的值；`del dict`，删除整个dict。  
+  `del set`,删除整个集合。无法删除单个元素。  
   `del tuple`，删除整个元组。
