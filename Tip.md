@@ -1,20 +1,20 @@
 # Tips for coding
 
 ### 1. 创建列表  
-```
+```python
 list = [i for i in range(10)]
 list = [0 for _ in range(10)]
 list1 = [0]*10
 ```
 还可在列表中对每个元素进行简单处理，相当于`map()`函数，例如,  
-```
+```python
 list1 = [i+2 for i in list]
 list1 = [str(i) for i in list]
 list1 = [str(i) for i in range(10)]
 ```
 
 ### 2. 不反复调用的简单函数，尽量使用匿名函数lambda  
-```
+```python
 x = lambda args: expression
 ```
 
@@ -25,7 +25,7 @@ x = lambda args: expression
 `zip()` `map()`，这两个函数返回值均为迭代器。需要列表形式，则用`list()`转换。
 
 其中，`zip()`用于一一对照。例如：  
-```
+```python
 x = [1, 2, 3]
 y = [4, 5, 6]
 z = [7, 8, 9]
@@ -43,7 +43,7 @@ u = zip(*xyz)
 1) 按位提取各位数字:  
   (1) 先转化为string，string为序列，可按位读取，`list_n = [int(i) for i in str(n)]`。  
   (2) 采用商余函数 `divmod(x,y)`，可以同时返回整数商和余数。  
-  ```
+  ```python
   list = []
   while n > 0:
     n, y = divmod(n, 10)
@@ -84,7 +84,7 @@ print(ll)
 递归函数：1）需要终止条件；2）只关注本层任务；3）返回结果只需关注最终结果。
 
 ### 11. “列表 += 元组”，是可行的。
-```
+```python
 l = [1,2,3,4,5]
 t= (6,7,8,9,10)
 l += t
@@ -117,7 +117,7 @@ print(l)
 
 ### 16. 序列的解开处理
 列表、元组前面加星号作用是将列表解开成多个独立的参数，传入函数。例如:  
-```
+```python
 def add(a, b):
     return a + b
 data = [7, 8]
@@ -129,13 +129,13 @@ print(add(*data))
 采用random模块可生成各种形式的随机变量。例如：
 
 在一定范围内生成随机整数：   
-```
+```python
 import random
 hh=random.randint(100,150)
 print(hh)
 ```
 在一定范围内生成一定长度的随机整数列表：  
-```
+```python
 ll = random.choices([i for i in range(100)],k=3)
 print(ll)
 ```
