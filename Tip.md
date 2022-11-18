@@ -176,7 +176,7 @@ print (ll)
   `set.remove(obj)`,删除元素obj。  
   dict不能使用`remove()`方法。  
   
-3) `del 序列`，系统函数。
+3) `del 序列`，系统函数。  
   `del list[index]`, 删除指定元素；`del list`,删除整个list。  
   `del dict[key]`,删除指定的键和对应的值；`del dict`，删除整个dict。  
   `del set`,删除整个集合。无法删除单个元素。  
