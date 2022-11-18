@@ -180,4 +180,6 @@ print (ll)
   `del list[index]`, 删除指定元素；`del list`,删除整个list。  
   `del dict[key]`,删除指定的键和对应的值；`del dict`，删除整个dict。  
   `del set`,删除整个集合。无法删除单个元素。  
-  `del tuple`，删除整个元组。
+  `del tuple`，删除整个元组。  
+
+4) 此外，不同的序列有各自特殊的删除函数，如`discard`, `clear`等等。
