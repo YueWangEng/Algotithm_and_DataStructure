@@ -171,7 +171,7 @@ print (ll)
   `dict.pop(key[,default])`,必须要给出要删除的key，返回值为键对应的值。  
   `set.pop()`,随机删除集合的一个元素。  
   
-2) `序列.remove(obj)'。删除指定元素，obj必须给出，无默认值。序列发生变化，无返回值。  
+2) `序列.remove(obj)`。删除指定元素，obj必须给出，无默认值。序列发生变化，无返回值。  
   `list.remove(obj)`, 删除元素obj,有重复值时，只删除第一个匹配项。  
   `set.remove(obj)`,删除元素obj。  
   dict不能使用`remove()`方法。  
