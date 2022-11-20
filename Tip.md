@@ -66,6 +66,7 @@ u = zip(*xyz)
 *重点：* key function作为定制排序规则，reverse默认为False，即升序。  
 1) key可为现有函数或者匿名函数，例如 `key=str.lower()` 用于字符串在小写情况下的排序，`key=lambda x:x[i]` 用于由list组成的序列，按第二项进行排序。  
 2) key在复杂情况下（例如先按第一项排序，相等的情况下按照第二项排序，或者要比较的项不在序列中，而在另一个相关序列中），可以自定义函数cmp。这时候需要用到 `functools` 中的 `cmp_to_key`。例如以下，要按照字典中对应值的大小，对字典键组成的list排序。
+
 ```python
 from functools import cmp_to_key
 
@@ -108,9 +109,14 @@ print(l)
 `正则表达式`
 
 ### 14. input函数  
-输入字符串: `inp = input('please input a string: ')`  
-输入数字: `inp = int(input('please input a number: '))`  
-输入列表: `inp = list(map(int,input().rstrip().split()))`  
+1) 输入字符串: `inp = input('please input a string: ')`  
+2) 输入数字: `inp = int(input('please input a number: '))`  
+3) 输入列表1 (以空格的方式): `inp = list(map(int,input().rstrip().split()))`  #回车为输入结束标志
+4) 输入列表2 (以回车的方式): 
+```python
+N = int(input().rstrip()) #给定要输入的数据数量
+ll = [input() for _ in range(N)]  #输入一个则回车，直到输入N个为止。
+```
 
 ### 15. 链表问题
 常用方法：1）递归；2）设置虚拟头节点；3）快慢指针；4）测试函数（链表和列表之间互相转换）。
