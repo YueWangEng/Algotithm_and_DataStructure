@@ -60,7 +60,7 @@ u = zip(*xyz)
 
 ### 9. 排序函数，要会用key参数解决问题。
 `list.sort([key, reverse])`，仅针对list，对现有list直接排序。没有返回值。  
-`sorted(iterable[,key, reverse])`, 系统函数，可用于所有可迭代对象，包括字符串。返回值为一个新的list。  
+`sorted(iterable[,key, reverse])`, 系统函数，可用于所有可迭代对象，包括字符串。返回值为一个新的list，无论迭代对象为哪种类型。  
 `max(iterable[, key])`, `min(iterable[, key])`，系统函数，可用于所有可迭代对象，包括字符串。返回值为最值。  
 
 *重点：* key function作为定制排序规则，reverse默认为False，即升序。  
@@ -101,11 +101,11 @@ print(l)
 4) 自定义数字反转函数。按位提取，反向获得反转数字。  
 
 ### 13. 处理字符串，特别是长句，常用函数
-`join()`，返回值为str。  
-`filter()`，返回值为list。  
+`join()`，序列合并为字符串，返回值为str。`str.join(sequence)`,sequece为可迭代序列，其元素需为string型，若不是，需要转换。str可为''.  
+`filter()`，按fuction，过滤序列元素，返回值为list。`filter(function, iterable)`，fuction用于判断，返回值需为True/False.  
 `replace()`  
 `rstrip(arg)`  
-`split(arg)`  
+`split(arg)`,分割字符串，返回值为list.  
 `正则表达式`
 
 ### 14. input函数  
@@ -189,3 +189,8 @@ print (ll)
   `del tuple`，删除整个元组。  
 
 4) 此外，不同的序列有各自特殊的删除函数，如`discard`, `clear`等等。
+
+### 24. 列表的函数：计数类
+1) `list.count(obj)`，返回obj出现的次数。
+2) collections模块中的Counter, `collections.Counter(squence)`, 适用于所有序列，返回值为迭代对象，一般用`dict()`函数转换为字典。
+3) `for k, v in enumerate(list)`，用于同时得到list的index和value。
