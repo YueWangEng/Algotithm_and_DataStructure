@@ -56,7 +56,7 @@ u = zip(*xyz)
 例如，查找效率：set > dict > list,时间复杂度set为o(log(n))，list为o(n).
 
 ### 8. 字典三序列  
-`dic.keys()`, `dic.values()`, `dic.items()`，返回值均为迭代器。需要列表形式，则用`list()`转换。
+`dic.keys()`, `dic.values()`, `dic.items()`，返回值均为迭代器iterable。需要列表形式，则用`list()`转换。
 
 ### 9. 排序函数，要会用key参数解决问题。
 `list.sort([key, reverse])`，仅针对list，对现有list直接排序。没有返回值。  
@@ -194,3 +194,20 @@ print (ll)
 1) `list.count(obj)`，返回obj出现的次数。
 2) collections模块中的Counter, `collections.Counter(squence)`, 适用于所有序列，返回值为迭代对象，一般用`dict()`函数转换为字典。
 3) `for k, v in enumerate(list)`，用于同时得到list的index和value。
+
+### 25. 字典的修改
+字典的键(key)不支持直接修改。可选择将旧键删除（其值暂时复制），增加新新键。
+
+```python
+info = {"x":1.5 ,"y":2}
+info["z"] = info.pop("x")
+```
+```python
+dict={'a':1, 'b':2}
+dict.update({'c':dict.pop("a")})
+```
+```python
+dict={'a':1, 'b':2}
+dict['c']=dict['a']
+del dict['a']
+```
