@@ -17,7 +17,8 @@ class Solution:
                 cur += 1
             else:
                 left += 1
-                nums[left], nums[cur] = nums[cur], nums[left]
+                if cur > left:
+                    nums[left], nums[cur] = nums[cur], nums[left]
                 cur += 1
                 
         return left+1
