@@ -13,7 +13,7 @@ class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         left, cur = 0, 0
         while cur < len(nums):
-            if nums[cur] == nums[left]:
+            if nums[cur] == nums[left]:         #compare the value of left and cur
                 cur += 1
             else:
                 left += 1
@@ -31,7 +31,7 @@ class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         cur = 0     # point cur, in front of it, there is no duplicate value.
         for i in range (1, len(nums)):      #point i, using for traverse.
-            if nums[i] != nums[i-1]:    # i pointer is the value changed pointer.
+            if nums[i] != nums[i-1]:    #when i pointer is the value changed pointer.
                 cur += 1
                 if i-cur > 0:     #It's okay if there is no judgement, but slightly repetitive.
                     nums[cur] = nums[i]
