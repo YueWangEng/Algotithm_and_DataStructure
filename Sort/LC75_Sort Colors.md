@@ -29,3 +29,24 @@ class Solution:
                 
         return nums
 ```
+
+###  Solution 2 (1 pointer):
+There are 2 traversals needed, one for sorting 0, the other one for sorting 1.
+
+```python
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        cur = 0
+        for i in range(len(nums)):
+            if nums[i] == 0:
+                nums[cur], nums[i] = nums[i], nums[cur]
+                cur += 1
+        for i in range(cur, len(nums)):
+            if nums[i] == 1:
+                nums[cur], nums[i] = nums[i], nums[cur]
+                cur += 1
+        return nums
+```
