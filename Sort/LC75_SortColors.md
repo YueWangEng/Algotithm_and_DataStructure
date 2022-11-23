@@ -16,14 +16,14 @@ class Solution:
         left, cur, right = 0, 0, len(nums)-1
         while cur <= right:
             if nums[cur] == 0:
-                if cur != left:
+                if cur != left:         #It's aslo okay without the judgement, but slightly repetitive.
                     nums[left], nums[cur] = nums[cur], nums[left]
                 left += 1
                 cur += 1      #cur is always infornt of lef, and the list is sorted from left to right, so the value from left should only be 1.
             elif nums[cur] == 1:
                 cur += 1
             else:
-                if cur != right:
+                if cur != right:            ##It's aslo okay without the judgement, but slightly repetitive.
                     nums[right], nums[cur] = nums[cur], nums[right]
                 right -= 1      #Here cur can not move head, as the value from right is uncertain, 0, 1 or 2. Should check one more time.
                 
