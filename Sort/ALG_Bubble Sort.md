@@ -1,4 +1,5 @@
 ### Bubble Sort
+Sort from right to left
 
 ```python
 l = [11,4,5,6,9]
