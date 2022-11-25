@@ -149,7 +149,7 @@ print(ll)
 将原有列表顺序打乱
 ```python
 list1 = list(range(10))
-random.shuffle(list)
+random.shuffle(list1)
 ```
 
 ### 18. 正则表达式之提取字符串（括号，任意两个指定字符之间等等）。
