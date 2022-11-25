@@ -5,6 +5,7 @@
 list = [i for i in range(10)]
 list = [0 for _ in range(10)]
 list1 = [0]*10
+list1 = list(range(10))
 ```
 还可在列表中对每个元素进行简单处理，相当于`map()`函数，例如,  
 ```python
@@ -144,6 +145,11 @@ print(hh)
 ```python
 ll = random.choices([i for i in range(100)],k=3)
 print(ll)
+```
+将原有列表顺序打乱
+```python
+list1 = list(range(10))
+random.shuffle(list)
 ```
 
 ### 18. 正则表达式之提取字符串（括号，任意两个指定字符之间等等）。
