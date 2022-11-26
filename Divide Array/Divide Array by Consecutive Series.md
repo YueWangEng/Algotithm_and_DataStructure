@@ -15,5 +15,6 @@ while r < len(ll):
         l = r
         r += 1
 lll.append(ll[l:])
+
 print(lll)
 ```
