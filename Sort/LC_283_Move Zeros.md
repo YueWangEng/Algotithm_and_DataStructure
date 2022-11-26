@@ -1,5 +1,5 @@
 ## Move Zeroes
-Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+Given an integer array nums, move all 0's to the end of it **while maintaining the relative order of the non-zero elements**.
 Note that you must do this in-place without making a copy of the array.
 
 ### Solution 1: (Overwrite methond) -> Best
@@ -15,6 +15,7 @@ def new_new_movingZero(ll):
         r += 1
     for i in range(l, len(ll)):         #set the value from l to the end as 0
         ll[i] = 0
+        
     return ll
 
 print (new_new_movingZero(nums))
@@ -32,5 +33,22 @@ def new_movingZero(ll):
             ll[l], ll[r] = ll[r], ll[l]     #if pointer l is 0 and pointer r is not 0, then swap
             l += 1            
         r += 1
+        
+    return ll
+```
+
+There is one reuquirement, **maintaining the relative order of the non-zero elements**. If there is not the requirement. The solution can be as below.
+```python
+nums = [0,1,0,3,12]
+
+def movingZero(ll):
+    l, r = 0, len(ll)-1
+    while l <= r:
+        if ll[l] == 0:
+            ll[l], ll[r] = ll[r], ll[l]
+            r -= 1
+        else:
+            l += 1
+    
     return ll
 ```
