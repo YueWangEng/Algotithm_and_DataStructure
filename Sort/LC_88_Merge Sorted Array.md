@@ -29,4 +29,29 @@ def sortTwoList(l1, l2):
         l1 = l2[:r2+1]+l1[r2+1:]
 
     return l1
+
+print(new_sortTwoList(l1,l2))
+```
+
+### Solution 2 (improved method): -> best
+
+```python
+def new_sortTwoList(l1, l2):
+    l1 += l2
+    f1, r1, r2 = len(l1)-1, len(l1)-len(l2)-1, len(l2)-1
+    while r2 >= 0:          #本题以l1为基础，目的是将l2按顺序加入l1中，不必去分析l2中的值用完以后的情况(此时r2 = -1)，这种情况下，已经排列好。
+        if r1 >= 0:
+            if l1[r1]>= l2[r2]:
+                l1[f1] = l1[r1]
+                f1 -= 1
+                r1 -= 1   
+            else:
+                l1[f1] = l2[r2]
+                f1 -= 1
+                r2 -= 1
+        else:           #此时，原l1中的值用完了(r1 = -1)，但l2依然有值，这意味着现l1，前面的一部分值需直接用l2剩余的值去替换。
+            l1[r2] = l2[r2]
+            r2 -= 1
+
+    return l1
 ```
