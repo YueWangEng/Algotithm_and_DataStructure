@@ -37,8 +37,7 @@ def new_movingZero(ll):
     return ll
 ```
 
-
-**PS**: There is one reuquirement, **maintaining the relative order of the non-zero elements**. If there is not the requirement. The solution can be as below.
+**PS**: There is one reuquirement, maintaining the relative order of the non-zero elements. If there is not the requirement. The solution can be as below.
 ```python
 nums = [0,1,0,3,12]
 
