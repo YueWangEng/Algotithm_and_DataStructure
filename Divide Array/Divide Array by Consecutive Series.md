@@ -26,7 +26,7 @@ Using the function, groupby, in the tool of itertools. In the sorted array, comp
 Here need to understand the return value of groupby and enumerate.
 1) `groupby(squence, func)`: a value and an itertool object. To change the itertool object to list, use `list()`.
 2) `enumerate(squence)`: enumerate object, use `list()` to get list, and the element inside of it is tuple.
-3) 
+
 ```python
 ll = [1, 3, 3, 5, 6, 7, 8, 11, 12, 13, 18,19]
 from itertools import groupby
