@@ -196,7 +196,7 @@ print (ll)
 
 4) 此外，不同的序列有各自特殊的删除函数，如`discard`, `clear`等等。
 
-### 24. 列表的函数：计数类
+### 24. 列表的函数：计数
 1) `list.count(obj)`，返回obj出现的次数。
 2) collections模块中的Counter, `collections.Counter(squence)`, 适用于所有序列，返回值为迭代对象，一般用`dict()`函数转换为字典。
 3) `for k, v in enumerate(list)`，用于同时得到list的index和value。
@@ -216,4 +216,11 @@ dict.update({'c':dict.pop("a")})
 dict={'a':1, 'b':2}
 dict['c']=dict['a']
 del dict['a']
+```
+
+### 26. 序列处理工具： itertools
+itertools中有一组用于许多常见数据算法的生成器，其中groupby可以接受任何序列和一个函数，它根据函数的返回值对序列中的连续元素进行分组。  
+```python
+import itertools
+itertools.groupby(squence,func)
 ```
