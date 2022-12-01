@@ -10,13 +10,10 @@ def func(nums, k):
         return False
     else:
         from collections import Counter
-        dnums = dict(Counter(nums))
-        lnums = list(sorted(dnums.keys()))
-        print(dnums)
-        print(lnums)
+        dnums = dict(Counter(nums))         #get the value-number dictionary from the list. Here no need to change to dict object, Counter object is fine, which inherit from dict class.
+        lnums = list(sorted(dnums.keys()))          #sorted key list. Here no need to use functions like dnums.keys() and list(), just sorted the dnums, and the return value is an list
         i = 0
         while i < len(lnums):
-            print(lnums[i], dnums)
             if dnums[lnums[i]] > 0:
                 j = lnums[i]
                 while j < lnums[i]+k:
@@ -27,6 +24,5 @@ def func(nums, k):
                         return False
             else:
                 i += 1
-        print (dnums)
         return True
 ```
