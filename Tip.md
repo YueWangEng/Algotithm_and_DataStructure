@@ -204,7 +204,7 @@ print (ll)
 
 ### 24. 列表的函数：计数
 1) `list.count(obj)`，返回obj出现的次数。
-2) collections模块中的Counter, `collections.Counter(squence)`, 适用于**所有序列**，返回值为Counter对象，可用`dict()`函数转换为字典（一般没必要），Counter继承了dict的方法，所以返回值可直接当dict使用。
+2) collections模块中的Counter, `collections.Counter(squence)`, 适用于**所有序列**，返回值为Counter对象，可用`dict()`函数转换为字典（一般没必要），Counter继承了dict的方法，所以**返回值可直接当dict使用**。
 3) `for k, v in enumerate(list)`，用于同时得到list的index和value。
 
 ### 25. 字典的修改
