@@ -224,3 +224,19 @@ itertools中有一组用于许多常见数据算法的生成器，其中groupby�
 import itertools
 itertools.groupby(squence,func)
 ```
+### 27. 循环loop： 记录其中某次循环出现的值，例如第三次循环
+可设置辅助值count来作为循环的次数记录，再利用判断语句得到这次循环中变化的值。
+```python
+list = [1,2,3,4,5,6]
+i = 0
+count = 1
+while i < len(list):
+    list[i] += i**2
+    if count == 3:      #记录在第3次变化时的值
+        new_list = list[i]
+    i += 1
+    count += 1
+    
+print(list)
+print(new_list)
+```
