@@ -29,3 +29,22 @@ def func(nums, k):
 ```
 
 ### Solution 2: (Improved Hashmap method) -> best
+Using Counter class, instead of dict class. The standard for checking is that start from the non-zero minimum vlaue, the count should be same with the other k-1 values, if so, minus the count and then go to the next value, if not, then return False
+```python
+def func(nums, k):
+    if len(nums) % k != 0:
+        return False
+    else:
+        from collections import Counter
+        dnums = Counter(nums)           #Counter object
+        lnums = sorted(dnums)           #Sorted list of keys
+        for i in lnums:
+            cou = dnums[i]          
+            if cou:         #从最前面的值（非零），按照其数量，对相应的后面的k-1个值，也应至少具有相当的数量，不少于该数量，则不成立
+                for j in range(i, i+k):
+                    if dnums[j] < cou:          #由于dnums是Counter类，对于不存在的键，也不会报错，其值为0.
+                        return False
+                    dnums[j] -= cou
+                    print(dnums)
+        return True
+```
