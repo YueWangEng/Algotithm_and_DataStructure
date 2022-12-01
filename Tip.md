@@ -64,7 +64,7 @@ u = zip(*xyz)
 2) `sorted(iterable[,key, reverse])`, 系统函数，可用于所有可迭代对象，包括字典（只比较值）和字符串。返回值为一个新的list（无论迭代对象为哪种类型）。特别的，对于字典，只返回由键组成的排序后的列表。例如，
 ```python
 nums = [16,5,15,15,20,16,20,14,21,20,19,20,12,17]
-cnt = collections.Counter(nums)
+cnt = collections.Counter(nums)     #Counter类，继承于dict类
 keys = sorted(cnt)      #相当于sorted(cnt.keys())
 n = cnt[keys[0]]
 ```
