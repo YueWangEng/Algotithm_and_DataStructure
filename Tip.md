@@ -61,8 +61,8 @@ u = zip(*xyz)
 
 ### 9. 排序函数，要会用key参数解决问题。
 `list.sort([key, reverse])`，仅针对list，对现有list直接排序。没有返回值。  
-`sorted(iterable[,key, reverse])`, 系统函数，可用于所有可迭代对象，包括字符串。返回值为一个新的list，无论迭代对象为哪种类型。  
-`max(iterable[, key])`, `min(iterable[, key])`，系统函数，可用于所有可迭代对象，包括字符串。返回值为最值。  
+`sorted(iterable[,key, reverse])`, 系统函数，可用于所有可迭代对象，包括字典（只比较值）和字符串。返回值为一个新的list，无论迭代对象为哪种类型。  
+`max(iterable[, key])`, `min(iterable[, key])`，系统函数，可用于所有可迭代对象，包括字典（只比较值）和字符串。返回值为最值。  
 
 *重点：* key function作为定制排序规则，reverse默认为False，即升序。  
 1) key可为现有函数或者匿名函数，例如 `key=str.lower()` 用于字符串在小写情况下的排序，`key=lambda x:x[i]` 用于由list组成的序列，按第二项进行排序。  
