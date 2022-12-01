@@ -13,15 +13,15 @@ def func(nums, k):
         dnums = dict(Counter(nums))         #get the value-number dictionary from the list. Here no need to change to dict object, Counter object is fine, which inherit from dict class.
         lnums = list(sorted(dnums.keys()))          #sorted key list. Here no need to use functions like dnums.keys() and list(), just sorted the dnums, and the return value is an list
         i = 0
-        while i < len(lnums):
-            if dnums[lnums[i]] > 0:
+        while i < len(lnums):           #遍历所有值
+            if dnums[lnums[i]] > 0:     #有可取的值（0代表已经没有，负值是不允许的）
                 j = lnums[i]
-                while j < lnums[i]+k:
-                    if j in dnums and dnums[j] > 0:
-                        dnums[j] -= 1
+                while j < lnums[i]+k:       #向后遍历再找k个
+                    if j in dnums and dnums[j] > 0:         #这些值需要都在，且数量为正（两种情况：要么原来就没有，要么是已经用完了）。
+                        dnums[j] -= 1        
                         j += 1
                     else:
-                        return False
+                        return False            #原来就没有，或者已经用完了的情况下，返回Flase
             else:
                 i += 1
         return True
