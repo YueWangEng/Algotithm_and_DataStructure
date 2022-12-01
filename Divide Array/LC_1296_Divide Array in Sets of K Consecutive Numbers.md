@@ -2,11 +2,12 @@
 Given an array of integers nums and a positive integer k, check whether it is possible to divide this array into sets of k consecutive numbers.
 Return true if it is possible. Otherwise, return false.
 
-### Solution 1:
+### Solution 1: (Hashmap Mehthod)
+Use the value-number dictionary to find the consecutive k numbers, if there is any unsatisfied case, then return False
 
 ```python
 def func(nums, k):
-    if len(nums) % k != 0:
+    if len(nums) % k != 0:          #Disable to divide k, then False.
         return False
     else:
         from collections import Counter
@@ -26,3 +27,5 @@ def func(nums, k):
                 i += 1
         return True
 ```
+
+### Solution 2: (Improved Hashmap method) -> best
