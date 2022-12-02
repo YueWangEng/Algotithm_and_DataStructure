@@ -117,9 +117,10 @@ print(l)
 
 ### 14. input函数  
 1) 输入字符串: `inp = input('please input a string: ')`  
-2) 输入数字: `inp = int(input('please input a number: '))`  
-3) 输入列表1 (以空格的方式): `inp = list(map(int,input().rstrip().split()))`  #回车为输入结束标志
-4) 输入列表2 (以回车的方式): 
+2) 输入数字: `inp = int(input('please input a number: '))` 
+3) 连续输入: `a,b,c = input('please input a number: ').split()`, `a,b,c = map(int, input('please input a number: ').split())`
+4) 输入列表1 (以空格的方式): `inp = list(map(int,input().rstrip().split()))`  #回车为输入结束标志
+5) 输入列表2 (以回车的方式): 
 ```python
 N = int(input().rstrip()) #给定要输入的数据数量
 ll = [input() for _ in range(N)]  #输入一个则回车，直到输入N个为止。
