@@ -225,7 +225,7 @@ dict['c']=dict['a']
 del dict['a']
 ```
 
-### 26. 序列处理工具： itertools
+### 26. 序列处理模块： itertools
 itertools中有一组用于许多常见数据算法的生成器，其中groupby可以接受任何序列和一个函数，它根据函数的返回值对序列中的连续元素进行分组。  
 ```python
 import itertools
@@ -246,4 +246,18 @@ while i < len(list):
     
 print(list)
 print(new_list)
+```
+
+### 28. 序列处理模块：collections
+collections中有多个处理序列的函数，包括Counter和defaultdict。
+1) Counter: 统计元素数目，返回Counter类（继承于dict类）。
+2) defaultdict: 返回defaultdict类（继承于dict键）`defaultdict(fun)`需要以一个带返回值的函数作为参数。可用于（但不限于）同级元素数目。直接用dict字典时，如果引用的Key不存在，就会抛出KeyError。如果希望key不存在时，返回一个默认值，就可以用defaultdict。
+```python
+from collections import defaultdict
+
+document = 'let us learn python'.split()
+word_counts = defaultdict(int)      #此时fun为int，定义了生成的defaultdict类的值的类型为int。
+for word in document:
+    word_counts[word] += 1
+print(word_counts)
 ```
