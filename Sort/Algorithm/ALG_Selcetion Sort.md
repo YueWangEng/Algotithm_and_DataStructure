@@ -13,7 +13,7 @@ def slectionSort(ll):
         #print (k)
         #ll[i], ll[k] = ll[k], ll[i]         #before i, it is the sorted part
         ke = i
-        for j in range(i+1,len(ll)):
+        for j in range(i+1,len(ll)):    #find the min values and its index from the unsorting part.
             if ll[j] < ll[ke]:
                 ke = j
             
