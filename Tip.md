@@ -108,7 +108,7 @@ print(l)
 4) 自定义数字反转函数。按位提取，反向获得反转数字。  
 
 ### 13. 处理字符串，特别是长句，常用函数
-`join()`，序列合并为字符串，返回值为str。`str.join(sequence)`,sequece为可迭代序列，其元素需为string型，若不是，需要转换。str可为''.  
+`join()`，序列合并为字符串，返回值为str。`str.join(sequence)`,sequece为可迭代序列，**其元素必须为string型**，若不是，需要转换。str可为''.  
 `filter()`，按fuction，过滤序列元素，返回值为list。`filter(function, iterable)`，fuction用于判断，返回值需为True/False.  
 `replace()`  
 `rstrip(arg)`  
