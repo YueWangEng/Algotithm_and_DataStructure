@@ -1,0 +1,40 @@
+### Merge Sort
+
+```python
+import random
+
+li = random.choices([i for i in range(100)], k=16)
+print (li)
+
+def merge(li, low, mid, high):  #假定mid两侧部分都是已经按升序排好
+    i = low
+    j = mid + 1
+    ltmp = []
+    while i <= mid and j <= high:   #依次选择小的放入到新创建的ltmp
+        if li[i] < li[j]:
+            ltmp.append(li[i])
+            i += 1
+        else:
+            ltmp.append(li[j])
+            j += 1
+    
+    while i <= mid:
+        ltmp.append(li[i])
+        i += 1
+    while j <= high:
+        ltmp.append(li[j])
+        j += 1
+    
+    li[low:high+1] = ltmp
+
+def merge_sort(li, low, high):
+    if low < high:  #保证至少要有两个元素
+        #print (low, high)
+        mid = (low+high) // 2
+        merge_sort(li, low, mid) #小分段左侧
+        merge_sort(li, mid+1, high) #小分段右侧
+        merge(li,low,mid, high)
+
+merge_sort(li, 0, len(li)-1)
+print(li)
+```
