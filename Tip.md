@@ -151,6 +151,7 @@ print(hh)
 在一定范围内生成一定长度的随机整数列表：  
 ```python
 ll = random.choices([i for i in range(100)],k=3)
+ll = [random.randint(0,100) for _ in range (3)]
 print(ll)
 ```
 将原有列表顺序打乱
